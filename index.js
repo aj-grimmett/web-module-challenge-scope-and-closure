@@ -84,8 +84,8 @@ finalScore(inning, 9) might return:
 
 function finalScore(cb, numberInnings){
   let score ={
-    'Home': 0,
-    'Away': 0
+    Home: 0,
+    Away: 0
   };
   for (let i=0; i<numberInnings; i++){
     score.home = cb() + score.home;
@@ -121,8 +121,8 @@ Final Score: 6 - 10 */
 
 function scoreboard(cb, numberInnings) {
   let score ={
-    'Home': 0,
-    'Away': 0
+    Home: 0,
+    Away: 0
   };
   for (let i=0; i<numberInnings; i++){
     score.Home = cb() + score.Home;
@@ -130,7 +130,7 @@ function scoreboard(cb, numberInnings) {
     score.Away = cb() + score.Away;
     console.log(cb());
     };
-    return (i) + "inning:" + (score.Home) + " - " + (score.Away)
+    return ` ${i} inning: ${score.Home} - ${score.Away}`
 }
 
 console.log(scoreboard(inning, 9));
